@@ -1,77 +1,97 @@
-/* From Uiverse.io by Pradeepsaranbishnoi */ 
-.container {
-  width: 150px;
-  height: 10px;
-  border: 2px solid #b2b2b2;
-  border-radius: 7px;
-  margin: 0 auto;
-  padding: 2px 1px;
-  overflow: hidden;
-  font-size: 0;
-}
-
-.box {
-  width: 9px;
-  height: 100%;
-  background: linear-gradient(to bottom, #2838c7 0%,#5979ef 17%,#869ef3 32%,#869ef3 45%,#5979ef 59%,#2838c7 100%);
-  display: inline-block;
-  margin-right: 2px;
-  animation: loader 2s infinite;
-  animation-timing-function: linear;
-}
-
-.logo {
-  width: 220px;
-  margin: 50px auto;
-  margin-top: 20px;
-}
-
-.logo p {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.top {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 16px;
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
 }
 
-.top:after {
-  content: "\00a9";
-  font-size: 10px;
-  position: relative;
-  top: -5px;
-  margin-left: 2px;
+/* Loading Screen Styles */
+.loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  transition: opacity 1s ease, visibility 1s ease;
 }
 
-.mid {
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 36px;
+.window {
+  text-align: center;
 }
 
-.mid span {
-  font-size: 22px;
-  display: inline-block;
-  vertical-align: top;
-  color: #FF6821;
-  margin-top: -8px;
+.logo .top {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.logo .mid {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo .mid span {
+  color: #00f0ff;
 }
 
 .logo .bottom {
-  font-size: 30px;
-  font-weight: 300;
-  line-height: 30px;
-  margin-left: 5px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
-@keyframes loader {
-  0% {
-    transform: translate(-30px);
-  }
+.container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
 
-  100% {
-    transform: translate(150px);
-  }
+.box {
+  width: 10px;
+  height: 10px;
+  background: #00f0ff;
+  animation: bounce 1s infinite alternate;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* Desktop UI */
+.desktop {
+  width: 100%;
+  height: 100%;
+  background: url('https://wallpaperaccess.com/full/317501.jpg') no-repeat center center/cover;
+  display: none;
+  flex-direction: column;
+}
+
+.taskbar {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.google {
+  border: none;
+  flex: 1;
+  width: 100%;
 }
