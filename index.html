@@ -1,21 +1,32 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+<head>
   <title>Num OS</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-  <div class="window">
-  <div class="logo">
-    <p class="top">Chompyware</p>
-    <p class="mid">NUM<span>OS</span></p>
-    <p class="bottom">not very professional</p>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading">
+    <div class="window">
+      <div class="logo">
+        <p class="top">Chompyware</p>
+        <p class="mid">NUM<span>OS</span></p>
+        <p class="bottom">not very professional</p>
+      </div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
   </div>
-  <div class="container">
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+
+  <!-- OS Desktop -->
+  <div class="desktop" id="desktop">
+    <div class="taskbar">Taskbar</div>
+    <iframe class="google" src="https://www.google.com" title="Google"></iframe>
   </div>
-</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
