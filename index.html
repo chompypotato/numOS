@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Num OS</title>
@@ -23,8 +23,52 @@
 
   <!-- OS Desktop -->
   <div class="desktop" id="desktop">
-    <div class="taskbar">Taskbar</div>
-    <iframe class="google" src="https://www.google.com" title="Google"></iframe>
+    <div class="icons">
+      <div class="icon" onclick="launchApp('google')">
+        <img src="https://www.google.com/favicon.ico" alt="Google">
+        <p>Google</p>
+      </div>
+      <div class="icon" onclick="launchApp('notes')">
+        <img src="https://img.icons8.com/ios/50/notepad.png" alt="Notes">
+        <p>Notes</p>
+      </div>
+      <div class="icon" onclick="launchApp('game')">
+        <img src="https://img.icons8.com/ios/50/controller.png" alt="Game">
+        <p>Game</p>
+      </div>
+      <!-- Add more icons as needed -->
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+      <div class="start">Start</div>
+      <div class="time" id="time">00:00</div>
+    </div>
+
+    <!-- App Windows -->
+    <div class="app-window" id="app-google">
+      <div class="window-header">
+        <span>Google</span>
+        <button onclick="closeApp('google')">X</button>
+      </div>
+      <iframe src="https://www.google.com" title="Google"></iframe>
+    </div>
+
+    <div class="app-window" id="app-notes">
+      <div class="window-header">
+        <span>Notes</span>
+        <button onclick="closeApp('notes')">X</button>
+      </div>
+      <textarea placeholder="Type your notes here..."></textarea>
+    </div>
+
+    <div class="app-window" id="app-game">
+      <div class="window-header">
+        <span>Game</span>
+        <button onclick="closeApp('game')">X</button>
+      </div>
+      <p>Fake Game Window :)</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
