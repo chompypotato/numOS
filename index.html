@@ -21,31 +21,37 @@
     </div>
   </div>
 
-  <!-- OS Desktop -->
+  <!-- Desktop -->
   <div class="desktop" id="desktop">
     <div class="icons">
       <div class="icon" onclick="launchApp('google')">
-        <img src="https://www.google.com/favicon.ico" alt="Google">
+        <img src="https://www.google.com/favicon.ico">
         <p>Google</p>
       </div>
       <div class="icon" onclick="launchApp('notes')">
-        <img src="https://img.icons8.com/ios/50/notepad.png" alt="Notes">
+        <img src="https://img.icons8.com/ios/50/notepad.png">
         <p>Notes</p>
       </div>
       <div class="icon" onclick="launchApp('game')">
-        <img src="https://img.icons8.com/ios/50/controller.png" alt="Game">
+        <img src="https://img.icons8.com/ios/50/controller.png">
         <p>Game</p>
       </div>
-      <!-- Add more icons as needed -->
+      <div class="icon" onclick="launchApp('calculator')">
+        <img src="https://img.icons8.com/ios/50/calculator.png">
+        <p>Calculator</p>
+      </div>
+      <div class="icon" onclick="launchApp('paint')">
+        <img src="https://img.icons8.com/ios/50/paint.png">
+        <p>Paint</p>
+      </div>
     </div>
 
-    <!-- Taskbar -->
     <div class="taskbar">
       <div class="start">Start</div>
       <div class="time" id="time">00:00</div>
     </div>
 
-    <!-- App Windows -->
+    <!-- Apps -->
     <div class="app-window" id="app-google">
       <div class="window-header">
         <span>Google</span>
@@ -59,7 +65,7 @@
         <span>Notes</span>
         <button onclick="closeApp('notes')">X</button>
       </div>
-      <textarea placeholder="Type your notes here..."></textarea>
+      <textarea placeholder="Write something..."></textarea>
     </div>
 
     <div class="app-window" id="app-game">
@@ -67,7 +73,23 @@
         <span>Game</span>
         <button onclick="closeApp('game')">X</button>
       </div>
-      <p>Fake Game Window :)</p>
+      <p style="padding:10px;">Coming soon: Fake game app!</p>
+    </div>
+
+    <div class="app-window" id="app-calculator">
+      <div class="window-header">
+        <span>Calculator</span>
+        <button onclick="closeApp('calculator')">X</button>
+      </div>
+      <iframe src="https://www.online-calculator.com/html5/online-calculator/index.php" title="Calculator"></iframe>
+    </div>
+
+    <div class="app-window" id="app-paint">
+      <div class="window-header">
+        <span>Paint</span>
+        <button onclick="closeApp('paint')">X</button>
+      </div>
+      <canvas id="paintCanvas" width="600" height="350" style="background:white;"></canvas>
     </div>
   </div>
 
